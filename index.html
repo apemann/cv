@@ -25,6 +25,7 @@
       .header {
         margin-bottom: 60px;
         padding-top: 20px;
+        position: relative;
       }
 
       .name {
@@ -41,6 +42,18 @@
         height: 120px;
         border-radius: 50%;
         object-fit: cover;
+      }
+
+      @media (max-width: 768px) {
+        .header {
+          padding-top: 140px;
+        }
+
+        .profile-image {
+          top: 0;
+          right: 50%;
+          transform: translateX(50%);
+        }
       }
 
       .header p {
