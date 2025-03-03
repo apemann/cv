@@ -1,0 +1,254 @@
+body {
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  position: relative;
+}
+
+.header {
+  margin-bottom: 60px;
+  padding-top: 20px;
+  position: relative;
+}
+
+.name {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-top: 140px;
+  }
+
+  .profile-image {
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+.header p {
+  margin-top: 30px;
+}
+
+.title {
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.tech-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.tech-list li {
+  margin-bottom: 10px;
+}
+
+.responsibilities {
+  margin-bottom: 30px;
+}
+
+.achievements {
+  margin-bottom: 30px;
+}
+
+.previous-experience {
+  margin-bottom: 30px;
+}
+
+.certifications {
+  margin-bottom: 30px;
+}
+
+.tech-icons {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-icons span {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.comment {
+  margin: 20px 0;
+}
+
+.footer {
+  margin-top: 50px;
+  text-align: right;
+  font-size: 14px;
+}
+
+.contact-info {
+  margin: 10px 0 20px 0;
+}
+
+.contact-info a {
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Theme picker styles */
+.theme-picker {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+.theme-picker select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Monokai Theme (Default) */
+.theme-monokai {
+  background-color: #272822;
+  color: #f8f8f2;
+}
+
+.theme-monokai .name {
+  color: #a6e22e;
+}
+
+.theme-monokai .title {
+  color: #a6e22e;
+}
+
+.theme-monokai .subtitle {
+  color: #66d9ef;
+}
+
+.theme-monokai .tech-icons span {
+  background-color: #3e3d32;
+}
+
+.theme-monokai .comment {
+  color: #75715e;
+}
+
+.theme-monokai .footer {
+  color: #75715e;
+}
+
+.theme-monokai .contact-info a {
+  color: #66d9ef;
+}
+
+.theme-monokai .theme-picker select {
+  background-color: #3e3d32;
+  color: #f8f8f2;
+  border: 1px solid #75715e;
+}
+
+/* Solarized Theme */
+.theme-solarized {
+  background-color: #002b36;
+  color: #839496;
+}
+
+.theme-solarized .name {
+  color: #cb4b16;
+}
+
+.theme-solarized .title {
+  color: #cb4b16;
+}
+
+.theme-solarized .subtitle {
+  color: #2aa198;
+}
+
+.theme-solarized .tech-icons span {
+  background-color: #073642;
+}
+
+.theme-solarized .comment {
+  color: #586e75;
+}
+
+.theme-solarized .footer {
+  color: #586e75;
+}
+
+.theme-solarized .contact-info a {
+  color: #2aa198;
+}
+
+.theme-solarized .theme-picker select {
+  background-color: #073642;
+  color: #839496;
+  border: 1px solid #586e75;
+}
+
+/* Light Theme */
+.theme-light {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.theme-light .name {
+  color: #0066cc;
+}
+
+.theme-light .title {
+  color: #0066cc;
+}
+
+.theme-light .subtitle {
+  color: #008080;
+}
+
+.theme-light .tech-icons span {
+  background-color: #f0f0f0;
+}
+
+.theme-light .comment {
+  color: #888888;
+}
+
+.theme-light .footer {
+  color: #888888;
+}
+
+.theme-light .contact-info a {
+  color: #0066cc;
+}
+
+.theme-light .theme-picker select {
+  background-color: #f0f0f0;
+  color: #333333;
+  border: 1px solid #cccccc;
+}
