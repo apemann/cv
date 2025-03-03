@@ -11,15 +11,30 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="theme.js"></script>
   </head>
-  <body class="theme-monokai">
+  <body>
     <div class="theme-picker">
-      <select id="theme-select">
-        <option value="monokai">Monokai</option>
-        <option value="solarized">Solarized</option>
-        <option value="light">Light</option>
-      </select>
+      <div class="theme-options">
+        <input
+          type="radio"
+          id="theme-monokai"
+          name="theme"
+          value="monokai"
+          checked
+        />
+        <label for="theme-monokai">Monokai</label>
+
+        <input
+          type="radio"
+          id="theme-solarized"
+          name="theme"
+          value="solarized"
+        />
+        <label for="theme-solarized">Solarized</label>
+
+        <input type="radio" id="theme-light" name="theme" value="light" />
+        <label for="theme-light">Light</label>
+      </div>
     </div>
 
     <div class="header">

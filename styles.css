@@ -5,6 +5,9 @@ body {
   margin: 0 auto;
   line-height: 1.6;
   position: relative;
+
+  background-color: #272822;
+  color: #f8f8f2;
 }
 
 .header {
@@ -16,6 +19,7 @@ body {
 .name {
   font-size: 28px;
   margin-bottom: 20px;
+  color: #a6e22e;
 }
 
 .profile-image {
@@ -29,14 +33,49 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
   .header {
-    padding-top: 140px;
+    padding-top: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .profile-image {
-    top: 0;
+    position: absolute;
+    top: 60px;
     right: 50%;
     transform: translateX(50%);
+  }
+
+  .theme-picker {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 3px;
+  }
+
+  .theme-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  .theme-options label {
+    padding: 3px 6px;
+    font-size: 12px;
+    white-space: nowrap;
   }
 }
 
@@ -47,10 +86,12 @@ body {
 .title {
   margin-bottom: 5px;
   font-size: 24px;
+  color: #a6e22e;
 }
 
 .subtitle {
   margin-bottom: 20px;
+  color: #66d9ef;
 }
 
 .section {
@@ -94,16 +135,19 @@ body {
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 14px;
+  background-color: #3e3d32;
 }
 
 .comment {
   margin: 20px 0;
+  color: #75715e;
 }
 
 .footer {
   margin-top: 50px;
   text-align: right;
   font-size: 14px;
+  color: #75715e;
 }
 
 .contact-info {
@@ -112,6 +156,7 @@ body {
 
 .contact-info a {
   text-decoration: none;
+  color: #66d9ef;
 }
 
 .contact-info a:hover {
@@ -121,134 +166,102 @@ body {
 /* Theme picker styles */
 .theme-picker {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 10px;
+  left: 10px;
   z-index: 100;
 }
 
-.theme-picker select {
-  padding: 5px 10px;
+.theme-options {
+  display: flex;
+  gap: 8px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 6px 8px;
   border-radius: 5px;
-  font-family: inherit;
+  font-size: 14px;
+}
+
+.theme-options input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.theme-options label {
   cursor: pointer;
+  padding: 3px 6px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
 
-/* Monokai Theme (Default) */
-.theme-monokai {
-  background-color: #272822;
-  color: #f8f8f2;
-}
-
-.theme-monokai .name {
-  color: #a6e22e;
-}
-
-.theme-monokai .title {
-  color: #a6e22e;
-}
-
-.theme-monokai .subtitle {
-  color: #66d9ef;
-}
-
-.theme-monokai .tech-icons span {
-  background-color: #3e3d32;
-}
-
-.theme-monokai .comment {
-  color: #75715e;
-}
-
-.theme-monokai .footer {
-  color: #75715e;
-}
-
-.theme-monokai .contact-info a {
-  color: #66d9ef;
-}
-
-.theme-monokai .theme-picker select {
-  background-color: #3e3d32;
-  color: #f8f8f2;
-  border: 1px solid #75715e;
+.theme-options input[type="radio"]:checked + label {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Solarized Theme */
-.theme-solarized {
+body:has(#theme-solarized:checked) {
   background-color: #002b36;
   color: #839496;
 }
 
-.theme-solarized .name {
+body:has(#theme-solarized:checked) .name {
   color: #cb4b16;
 }
 
-.theme-solarized .title {
+body:has(#theme-solarized:checked) .title {
   color: #cb4b16;
 }
 
-.theme-solarized .subtitle {
+body:has(#theme-solarized:checked) .subtitle {
   color: #2aa198;
 }
 
-.theme-solarized .tech-icons span {
+body:has(#theme-solarized:checked) .tech-icons span {
   background-color: #073642;
 }
 
-.theme-solarized .comment {
+body:has(#theme-solarized:checked) .comment {
   color: #586e75;
 }
 
-.theme-solarized .footer {
+body:has(#theme-solarized:checked) .footer {
   color: #586e75;
 }
 
-.theme-solarized .contact-info a {
+body:has(#theme-solarized:checked) .contact-info a {
   color: #2aa198;
-}
-
-.theme-solarized .theme-picker select {
-  background-color: #073642;
-  color: #839496;
-  border: 1px solid #586e75;
 }
 
 /* Light Theme */
-.theme-light {
+body:has(#theme-light:checked) {
   background-color: #ffffff;
   color: #333333;
 }
 
-.theme-light .name {
+body:has(#theme-light:checked) .name {
   color: #0066cc;
 }
 
-.theme-light .title {
+body:has(#theme-light:checked) .title {
   color: #0066cc;
 }
 
-.theme-light .subtitle {
+body:has(#theme-light:checked) .subtitle {
   color: #008080;
 }
 
-.theme-light .tech-icons span {
+body:has(#theme-light:checked) .tech-icons span {
   background-color: #f0f0f0;
 }
 
-.theme-light .comment {
+body:has(#theme-light:checked) .comment {
   color: #888888;
 }
 
-.theme-light .footer {
+body:has(#theme-light:checked) .footer {
   color: #888888;
 }
 
-.theme-light .contact-info a {
+body:has(#theme-light:checked) .contact-info a {
   color: #0066cc;
-}
-
-.theme-light .theme-picker select {
-  background-color: #f0f0f0;
-  color: #333333;
-  border: 1px solid #cccccc;
 }
